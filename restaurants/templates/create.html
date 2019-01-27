@@ -4,8 +4,9 @@
     Create
 {% endblock title %}
 {% block content %}
+<div class="col-sm-2 col-lg-2 col-form-label m-auto">
         <form action="{% url 'restaurant-create' %}" method="POST">
             {% csrf_token %}
             {{form.as_p}}
-            <input type="submit" value="Create">
+            <input type="submit" value="Create" class="btn btn-outline-info col-md-3 col-lg-6"></form></div> 
 {% endblock content %}

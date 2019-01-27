@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Update</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block title  %}
+    Update
+{% endblock title %}
+{% block content %}
+        <div class="card m-auto p-5 col-lg-6 col-xs-12">
     	<form action="{% url 'restaurant-update' restaurant.id %}" method="POST">
     {% csrf_token %}
-    {{form}}
+    {{form.as_p}}
     <input type="submit" value="Update">
 </form>
-
-    </body>
-</html>
+</div>
+{% endblock content %}
